@@ -8,6 +8,8 @@ Package.on_use(function (api) {
         'lib/zencoder.js'
     ], 'server'
     );
-
+    if (typeof api.export !== 'undefined') {
+		api.export("ZENCODER", "server");
+	}
 });
-Npm.depends({'zencoder':"0.0.3"});
+Npm.depends({'zencoder':"0.4.2"});
